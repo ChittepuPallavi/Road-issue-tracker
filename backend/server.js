@@ -7,7 +7,9 @@ const http = require('http');
 
 // Load env vars
 dotenv.config();
-
+app.get("/", (req, res) => {
+  res.send("🚀 Road Issue Tracker API is running");
+});
 // Connect to database
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log(`MongoDB Connected...`))
